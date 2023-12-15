@@ -1,0 +1,12 @@
+<h1>Editar Carrera</h1>
+<form [formGroup]="formCarreras">
+    <div>
+       <input class="form-control" formControlName="carNombre" type="text" name="" id=""> 
+    </div>
+    <div>
+      <button (click)="actualizarCarrera()" class="btn btn-primary">Editar carrera</button> 
+       <button routerLink="/listarcarreras" class="btn btn-danger">Cancelar</button> 
+    </div>
+    
+   
+</form>

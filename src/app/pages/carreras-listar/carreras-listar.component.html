@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+        <tr>
+ 
+            <th>Nombre</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carrera of carreras">
+
+            <td>{{ carrera.carNombre }}</td>
+            <td>
+                <button routerLink="/editarcarreras/{{carrera.idCarreras}}" class="btn btn-primary">Editar</button>
+                <button (click)="eliminarCarrera(carrera)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

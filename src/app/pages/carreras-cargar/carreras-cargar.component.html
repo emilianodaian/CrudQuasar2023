@@ -1,0 +1,12 @@
+<h1>Crear Carrera</h1>
+<form >
+    <div>
+       <input class="form-control" [(ngModel)]="carrera.carNombre" type="text" name="" id=""> 
+    </div>
+    <div>
+      <button (click)="crearCarrera()" class="btn btn-primary">Crear carrera</button> 
+       <button routerLink="/listarcarreras" class="btn btn-danger">Cancelar</button> 
+    </div>
+    
+   
+</form>
