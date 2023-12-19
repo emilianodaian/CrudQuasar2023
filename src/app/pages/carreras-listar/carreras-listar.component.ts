@@ -9,6 +9,7 @@ import { CarrerasService } from 'src/app/services/carreras.service';
 })
 export class CarrerasListarComponent implements OnInit{
 
+  buscarCarrera:string='';
   carreras:any[]=[];
 
   ngOnInit(): void {
@@ -42,6 +43,22 @@ eliminarCarrera(carrera:any):void{
     )
   }
 }
+
+searchCarreras():void{
+  if(this.buscarCarrera){
+    this.carrerasService.getCarreraByNombre(this.buscarCarrera).subscribe(
+      (data) => {
+        this.carreras = data;
+      },
+      (error) => {
+        console.error('Error al obtener la carrera', error);
+      }
+    );
+  }else{
+    this.cargarTabla();
+  }
+}
+
 
 
 }

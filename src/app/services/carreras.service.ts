@@ -20,6 +20,11 @@ export class CarrerasService {
     return this.http.get(`${this.apiUrl}?id=${id}`);
   }
 
+  //Método para obtener carrera por Nombre
+  getCarreraByNombre(nombre: any): Observable<any> {
+    return this.http.get(`${this.apiUrl}?nombre=${nombre}`);
+  }
+
   //Método para eliminar una carrera por ID
   deleteCarreras(id:any): Observable<any>{
     return this.http.delete(`${this.apiUrl}?id=${id}`);
