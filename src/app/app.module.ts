@@ -14,6 +14,7 @@ import { CarrerasListarComponent } from './pages/carreras-listar/carreras-listar
 import { CarrerasEditarComponent } from './pages/carreras-editar/carreras-editar.component';
 import { CarrerasCargarComponent } from './pages/carreras-cargar/carreras-cargar.component';
 import { CarrerasService } from './services/carreras.service';
+import { EstudiantesCargarComponent } from './pages/estudiantes-cargar/estudiantes-cargar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CarrerasService } from './services/carreras.service';
     ContactoComponent,
     CarrerasListarComponent,
     CarrerasEditarComponent,
-    CarrerasCargarComponent
+    CarrerasCargarComponent,
+    EstudiantesCargarComponent
   ],
   imports: [
     BrowserModule,
