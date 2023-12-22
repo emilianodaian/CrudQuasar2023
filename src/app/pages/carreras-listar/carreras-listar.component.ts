@@ -1,6 +1,8 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,ElementRef,OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from "@angular/router";
 import { CarrerasService } from 'src/app/services/carreras.service';
+import { jsPDF } from 'jspdf';
+
 
 @Component({
   selector: 'app-carreras-listar',
@@ -60,5 +62,31 @@ searchCarreras():void{
 }
 
 
+@ViewChild('tabla', {static:true}) tabla!:ElementRef;
+generarPDF(){
+  const pdf = new jsPDF({
+    orientation: 'portrait',
+    unit:'mm',
+    format: [297,210]
+  });
+
+  const tabla=this.tabla.nativeElement;
+
+  pdf.html(
+    tabla,{
+      callback:(pdf)=>{
+        pdf.save('listadoCarreras.pdf');
+      },
+      x:5,
+      y:5,
+      html2canvas:{
+        scale:0.3
+      }
+    }
+  );
+
+
+
+}
 
 }

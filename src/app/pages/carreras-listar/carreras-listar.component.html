@@ -6,12 +6,12 @@
 
 </div>
 
-
-<table class="table">
+<div #tabla>
+    <table class="table">
     <thead>
         <tr>
  
-            <th>Nombre</th>
+            <th>Listado de Carreras</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -26,3 +26,10 @@
         </tr>
     </tbody>
 </table>
+</div>
+
+<div>
+<button (click)="generarPDF()" type="button">Descargar</button>
+    
+</div>
+
